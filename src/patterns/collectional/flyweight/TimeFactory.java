@@ -8,7 +8,8 @@ public class TimeFactory {
 	
 	public static Time create(int hour, int minute) {
 		String key = hour + ":" + minute;
-		if(!timeCache.containsKey(key)) {
+		
+		if (!timeCache.containsKey(key)) {
 			timeCache.put(key, new Time(minute, hour));
 		}
 		
